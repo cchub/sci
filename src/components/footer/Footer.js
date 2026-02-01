@@ -39,6 +39,20 @@ const Footer = ({ scrollTo = null }) => {
           <div className="links">
             <p className="link">Privacy Policy</p>
             <p className="link">Terms of Service</p>
+            <a
+              href="https://github.com/cchub/sci"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://api.scitrade.africa/api/docs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              API Docs
+            </a>
           </div>
         </div>
         <div className="socials">
