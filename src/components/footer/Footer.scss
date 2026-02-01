@@ -1,0 +1,94 @@
+@import '../../Reusables.scss';
+
+.footer{
+    display: flex;
+    padding-top: 80px;
+    .logo{
+        margin-right: auto;
+    }
+    .links-section{
+        display: flex;
+        margin-right: 150px;
+        .links{
+            margin-left: 40px;
+            .link{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 143.16%;
+                color: #161616;
+                margin-bottom: 20px;
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .socials{
+        h4{
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 143.16%;
+            color: #2C2C2C;
+            margin-bottom: 20px;
+        }
+        .social{
+            display: flex;
+            align-items: center;
+            margin-bottom: 26px;
+            p{
+                margin-left: 18px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 139.2%;
+                color: #161616;
+            }
+        }
+    }
+    @include mobile{
+        padding-bottom: 60px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .logo{
+            margin-bottom: 64px;
+            width: 100%;
+        }
+        .links-section{
+            margin-right: 0;
+            flex-direction: column;
+            margin-bottom: 46px;
+            .links{
+                margin-left: 0;
+            }
+        }
+        .socials{
+            margin-left: 0;
+        }
+    }
+    @include tablet{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .logo{
+            margin-bottom: 64px;
+            width: 100%;
+        }
+        .links-section{
+            margin-right: 0;
+            flex-direction: column;
+            .links{
+                margin-left: 0;
+            }
+        }
+    }
+}
+.copyright{
+    margin-top: 66px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #2C2C2C;
+    @include mobile{
+        margin-top: 30px;
+        text-align: center;
+    }
+}

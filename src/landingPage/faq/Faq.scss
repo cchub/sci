@@ -1,0 +1,70 @@
+@import '../../Reusables.scss';
+
+.faqs{
+    padding: 104px 8%;
+    @include mobile{
+        padding: 90px 5%;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 70px;
+        @include mobile-tablet{
+            grid-template-columns: 1fr; 
+        }
+        .faq{
+            padding: 42px 0;
+            border-top: 1px solid #DAD9E1;
+            border-bottom: 1px solid #DAD9E1;
+            margin-top: -1px;
+            .faq-question{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                position: relative;
+                padding-right: 50px;
+                p{
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: #2C2C2C;
+                    @include mobile{
+                        font-size: 20px;
+                    }
+                }
+                svg{
+                    transition: 0.1s ease-in;
+                    position: absolute;
+                    right:  0;
+                    &.show{
+                        opacity: 1;
+                    }
+                    &.hide{
+                        opacity: 0;
+                    }
+                }
+            }
+            .faq-answer{
+                font-size: 20px;
+                line-height: 143.16%;
+                color: #565656;
+                transition: 0.2s height ease-in;
+                background: #FFFFFF;
+                overflow: hidden;
+                p{
+                    transition: 0.1s ease-in;
+                    white-space: pre-wrap;
+                    &.open{
+                            opacity: 1;
+                            height: auto;
+                            margin-top: 34px;
+                    }
+                    &.close{
+                            opacity: 0;
+                            height: 0;
+                            margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

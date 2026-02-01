@@ -1,0 +1,43 @@
+@import '../../Reusables.scss';
+
+.contact-us{
+    padding: 80px 8% 40px;
+    background: #F6F9FC;
+    @include mobile{
+        padding: 90px 5% 40px;
+    }
+    .dicover-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 80px;
+        border-bottom: 1px solid rgba(130, 127, 152, 0.3);
+        @include mobile{
+            padding-bottom: 60px;
+        }
+        h3{
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 123.2%;
+            color: #2C2C2C;
+            width: 32%;
+            margin-right: 50px;
+        }
+        @include tablet{
+            flex-wrap: wrap;
+            h3{
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+        @include mobile{
+            flex-wrap: wrap;
+            h3{
+                // font-size: 36px;
+                width: 80%;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    
+}

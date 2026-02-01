@@ -1,0 +1,117 @@
+@import "../../Reusables.scss";
+
+.characteristics {
+  display: flex;
+  flex-wrap: wrap;
+  .characteristic {
+    width: 322px;
+    height: 81px;
+    border: 1px solid rgba(130, 127, 152, 0.3);
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    padding: 14px 18px;
+    position: relative;
+    @include mobile {
+      width: 100%;
+    }
+    p.title {
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 150%;
+      color: #565656;
+      margin-bottom: 6px;
+    }
+    h4 {
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 150%;
+      color: #565656;
+    }
+    &.uppercase {
+      h4 {
+        text-transform: uppercase;
+        img{
+          margin-left: 5px;
+        }
+      }
+    }
+    &.bloc {
+      div {
+        display: flex;
+        h4 {
+          margin-right: 5px;
+          cursor: pointer;
+          border-bottom: 1px dotted #565656;
+        }
+      }
+    }
+    &.empty {
+      div {
+        background: #e0e0e0;
+        border-radius: 25px;
+        &:first-child {
+          height: 14px;
+          width: 200px;
+          margin-bottom: 20px;
+        }
+        height: 20px;
+        width: 75px;
+      }
+    }
+    .tooltip {
+      position: absolute;
+      right: 15px;
+      top: 30px;
+      .description {
+        display: none;
+        position: absolute;
+        right: -10px;
+        top: 30px;
+        width: 239px;
+        background: #ffffff;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        padding: 12px 15px;
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: normal;
+        text-transform: initial;
+        font-size: 12px;
+        line-height: 130%;
+        z-index: 3;
+        color: #565656;
+        &::before {
+          content: "";
+          background-color: #ffffff;
+          height: 15px;
+          width: 15px;
+          position: absolute;
+          top: -7px;
+          right: 14px;
+          transform: rotate(45deg);
+        }
+        // @include mobile {
+        //   left: -20px;
+        //   top: initial;
+        //   bottom: 35px;
+        //   &::before {
+        //     left: initial;
+        //     top: initial;
+        //     bottom: -7px;
+        //     left: 20px;
+        //   }
+        // }
+      }
+      &:hover {
+        .description {
+          display: initial;
+        }
+      }
+    }
+  }
+}

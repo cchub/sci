@@ -1,0 +1,94 @@
+@import '../../Reusables.scss';
+
+
+.country-card{
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    .card-top{
+        padding: 14px 16px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #EFEFEF;
+        .flag{
+            width: 30px;
+            height: 20px;
+            margin-right: 12px;
+        }
+        h4{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 150%;
+            color: #161616;
+            margin-right: auto;
+        }
+        .link{
+            display: flex;
+            align-items: center;
+            p{
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 150%;
+                color: #004AD9;
+                margin-right: 6px;
+            }
+        }
+    }
+    .value-div{
+        border-bottom: 0.8px solid #EFEFEF;
+        padding: 16px;
+        p{
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 12px;
+            color: #595959;
+            margin-bottom: 4px;
+        }
+        h3{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 24px;
+            color: #595959;
+        }
+        h3.regular{
+            font-weight: initial;
+        }
+        &:last-child{
+            border-bottom: 0;
+        }
+    }
+    .top-imports{
+        padding: 10px 16px 6px;
+        p{
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 150%;
+            color: #595959;
+            margin-bottom: 10px;
+        }
+        h3{
+            font-size: 24px;
+            line-height: 150%;
+            color: #595959
+        }
+        .imports{
+            display: flex;
+            flex-wrap: wrap;
+            .import{
+                height: 33px;
+                border: 1px solid #E0E0E0;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                padding: 0 14px;
+                margin-right: 8px;
+                margin-bottom: 10px;
+                p{
+                    font-size: 12px;
+                    line-height: 150%;
+                    color: #595959;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

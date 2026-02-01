@@ -1,0 +1,117 @@
+@import "../../Reusables.scss";
+
+.hero {
+  min-height: 100vh;
+  padding: 45px 8%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  @include mobile {
+    padding: 45px 5%;
+  }
+  @include tablet {
+    padding: 45px 5%;
+  }
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+    @include mobile-tablet {
+      flex-wrap: wrap;
+    }
+    .text-content {
+      width: 45%;
+      @include tablet {
+        margin-right: 0;
+        width: 100%;
+      }
+      @include mobile {
+        margin-right: 0;
+        width: 100%;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 106.5%;
+        color: #ffffff;
+        position: relative;
+        margin-bottom: 23px;
+        .underline {
+          position: relative;
+          white-space: nowrap;
+          color: #f4b206;
+          img {
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+          }
+        }
+        .yellow {
+          color: #f4b206;
+        }
+        @include tablet {
+          font-size: 42px;
+        }
+        @include mobile {
+          font-size: 30px;
+          margin-bottom: 40px;
+          br {
+            display: none;
+          }
+        }
+      }
+      .sub-title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 150%;
+        color: #ffffff;
+        margin-bottom: 30px;
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+    .image-container {
+      width: 40%;
+      @include mobile {
+        width: 100%;
+      }
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+  .powered-container {
+    position: absolute;
+    bottom: 0px;
+    left: 8%;
+    right: 8%;
+    @include mobile-tablet {
+      left: 5%;
+      right: 5%;
+    }
+  }
+  .powered-by {
+    display: flex;
+    align-items: center;
+    p {
+      margin-right: 6px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      color: #b3bbff;
+    }
+    img {
+      width: 200px;
+      height: auto;
+    }
+    @include mobile {
+      left: 5%;
+      bottom: 20px;
+    }
+  }
+}

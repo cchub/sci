@@ -1,0 +1,379 @@
+@import '../../Reusables.scss';
+
+$gradient: linear-gradient(to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 80%),
+lightgray;
+
+.loader-gradient {
+    background: $gradient;
+    background-repeat: repeat-y;
+    background-size: 50px 200px;
+    background-position: 0 0;
+    animation: shine 1s infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 100% 0,
+            /* move highlight to right */
+            0 0;
+    }
+}
+
+.skeleton-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 28px;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        background: #FFFFFF;
+        border: 1px solid #EFEFEF;
+
+        .top-section {
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #EFEFEF;
+
+            div {
+                background: #E0E0E0;
+
+                &:first-child {
+                    width: 30px;
+                    height: 21.12px;
+                    margin-right: 10px;
+                }
+
+                &:last-child {
+                    width: 92px;
+                    height: 11.06px;
+                    border-radius: 27px;
+                }
+            }
+        }
+
+        .middle {
+            padding: 8px 16px;
+            border-bottom: 1px solid #EFEFEF;
+
+            div {
+                background: #E0E0E0;
+
+                &:first-child {
+                    width: 169px;
+                    height: 11.06px;
+                    margin-bottom: 5px;
+                    border-radius: 27px;
+                }
+
+                &:last-child {
+                    width: 92px;
+                    height: 25.15px;
+                    border-radius: 27px;
+                }
+            }
+        }
+
+        .bottom {
+            padding: 12px 16px;
+            display: flex;
+            flex-wrap: wrap;
+
+            div {
+                background: #E0E0E0;
+                border-radius: 50px;
+
+                &:nth-child(1) {
+                    width: 60%;
+                    height: 11.06px;
+                    border-radius: 27px;
+                    margin-bottom: 13px;
+                    margin-right: 40%;
+                    background: #E0E0E0;
+                }
+
+                &:nth-child(2) {
+                    width: 142px;
+                    height: 33px;
+                    margin-right: 8px;
+                    margin-bottom: 10px;
+                }
+
+                &:nth-child(3) {
+                    width: 87px;
+                    height: 33px;
+                    margin-bottom: 10px;
+                }
+
+                &:nth-child(4) {
+                    width: 122px;
+                    height: 33px;
+                    margin-right: 8px;
+                }
+
+                &:nth-child(5) {
+                    width: 39px;
+                    height: 33px;
+                }
+            }
+        }
+    }
+}
+
+// REPORTS SKELETON START
+.trade-skeleton-secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 28px;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        .top-section {
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #EFEFEF;
+            max-width: 70%;
+            background: #FFFFFF;
+
+            div {
+                @extend .loader-gradient;
+
+                &:first-child {
+                    width: 100%;
+                    height: 23rem;
+                    border-bottom: 1px solid #EFEFEF;
+                }
+            }
+
+        }
+
+        .bottom-section {
+            padding: 14px 16px;
+            background: #FFFFFF;
+            max-width: 70%;
+
+            div {
+                @extend .loader-gradient;
+                border-radius: 10px;
+
+                &:nth-child(1) {
+                    width: 70%;
+                    height: 11.06px;
+                    border-radius: 27px;
+                    margin-right: 40%;
+                    background: #E0E0E0;
+                    margin: 10px 0;
+                }
+
+                &:nth-child(2) {
+                    width: 142px;
+                    height: 33px;
+                }
+            }
+        }
+
+        @include tablet {
+
+            .top-section,
+            .bottom-section {
+                max-width: 90%;
+            }
+
+            .top-section {
+                div {
+                    &:first-child {
+                        height: 20rem;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        @include mobile {
+
+            .top-section,
+            .bottom-section {
+                max-width: 95%;
+            }
+        }
+    }
+}
+
+.trade-skeleton-primary {
+    padding: 87px 5% 114px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 70vh;
+
+    @include mobile {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left-section {
+        background: #FFFFFF;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+
+        @include tablet {
+            width: 40%;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+        // @include mobile {
+        //     justify-content: center;
+        // }
+
+        >div {
+            padding: 14px 16px;
+            max-width: 70%;
+            width: 350px;
+            height: 25rem;
+            margin-right: 30px;
+            background: white;
+            border: 1px solid #E0E0E0;
+
+            div {
+                @extend .loader-gradient;
+                height: 100%;
+                width: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    .right-section {
+        margin-left: 67px;
+        width: 100%;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4rem 0;
+
+        @include tablet {
+            width: 40%;
+        }
+
+        // @include mobile {
+        //     display: none;
+        // }
+
+        div {
+            @extend .loader-gradient;
+            padding: 14px 16px;
+            max-width: 70%;
+            width: 350px;
+            border-radius: 4px;
+
+            &:nth-child(1) {
+                width: 200px;
+                border-radius: 10px;
+            }
+
+            &:nth-child(2) {
+                width: 280px;
+            }
+
+            &:nth-child(4) {
+                width: 180px;
+                border-radius: 10px;
+            }
+
+        }
+
+        @include tablet {
+            margin-left: 10px;
+        }
+    }
+}
+
+.report-skeleton {
+    width: 500px;
+    max-width: 80%;
+    height: fit-content;
+    margin: 0 auto;
+
+    .card {
+        .top-section {
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            max-width: 70%;
+
+            @include mobile {
+                max-width: 100%;
+            }
+
+            div {
+                @extend .loader-gradient;
+
+                &:first-child {
+                    width: 100%;
+                    height: 23rem;
+                    border-bottom: 1px solid #EFEFEF;
+                }
+            }
+        }
+
+        .bottom-section {
+            padding: 14px 16px;
+            max-width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include mobile {
+                max-width: 100%;
+            }
+
+            div {
+                @extend .loader-gradient;
+                border-radius: 10px;
+
+                &:nth-child(1) {
+                    width: 142px;
+                    height: 33px;
+                }
+
+                &:nth-child(2) {
+                    width: 70%;
+                    height: 11.06px;
+                    border-radius: 27px;
+                    margin-right: 40%;
+                    background: #E0E0E0;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+// REPORTS SKELETON END

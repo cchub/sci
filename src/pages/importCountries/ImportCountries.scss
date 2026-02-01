@@ -1,0 +1,125 @@
+@import '../../Reusables.scss';
+
+.import-countries{
+    padding: 80px 0 0;
+    background: #FBFBFD;
+    min-height: 100vh;
+    @include mobile-tablet{
+        padding: 60px 0 0;
+    }
+    .top{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 80px;
+        z-index: 12;
+        padding: 22px 8%;
+        border-bottom: 1px solid rgba(130, 127, 152, 0.2);
+        background: #FBFBFD;
+        display: flex;
+        align-items: center;
+        @include mobile-tablet{
+            flex-wrap: wrap;
+            top: 60px;
+        }
+        h4{
+            font-size: 16px;
+            color: #565656;
+            margin-right: 19px;
+            line-height: 150%;
+            &.from{
+                margin: 0 24px;
+            }
+            @include tablet{
+                width: 100%;
+                margin-bottom: 7px;
+                &.from{
+                    width: initial;
+                }
+            }
+            @include mobile{
+                width: 100%;
+                margin-bottom: 7px;
+                &.from{
+                    margin: 20px 0 7px;
+                }
+            }
+        }
+        .focus-country{
+            display: flex;
+            align-items: center;
+            border: 1px solid #C0C0C0;
+            padding: 0 23px;
+            min-width: 213px;
+            height: 54px;
+            cursor: pointer;
+            .flag{
+                width: 21.83px;
+                height: 11.95px;
+                margin-right: 8px;
+            }
+            p{
+                font-weight: 400;
+                font-size: 16px;;
+                color: #000000;
+                margin-right: auto;
+                text-transform: capitalize;
+            }
+            .arrow{
+                width: 12px;
+                height: auto;
+                margin-left: 20px;
+                @include mobile{
+                    width: 10px;
+                }
+            }
+        }
+        @include mobile-tablet{
+            padding: 20px 5%;
+            h4{
+                font-size: 14px;
+            }
+        }
+        @include mobile{
+            flex-wrap: wrap;
+            h4{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .main-content{
+        padding: 38px 8% 0;
+        @include mobile-tablet{
+            padding: 38px 5% 0;
+        }
+        .list-title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(130, 127, 152, 0.15);
+            margin-bottom: 32px;
+            h4{
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 150%;
+                color: #565656;
+                margin-right: 10px;
+            }
+            span{
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 150%;
+                color: #565656
+            }
+            @include mobile{
+                flex-wrap: wrap;
+                h4{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .info-icon{
+        cursor: pointer;
+    }
+}

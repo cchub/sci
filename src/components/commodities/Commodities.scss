@@ -1,0 +1,159 @@
+@import '../../Reusables.scss';
+
+.commodities-section{
+    .list{
+        .desktop-list{
+            @include mobile{
+                display: none;
+            }
+            .list-top, .list-item{
+                display: grid;
+                grid-template-columns: 0.5fr 2.5fr 1.5fr;
+                background: #FFFFFF;
+                padding: 36px 46px;
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                color: rgba(42, 42, 42, 0.7);
+                border: 1px solid rgba(38, 38, 38, 0.1);
+                .value-range{
+                    cursor: pointer;
+                    position: relative;
+                    svg{
+                        margin-left: 16px;
+                    }
+                    .menu{
+                        position: absolute;     
+                        top: 30px;
+                        .range-div{
+                            padding: 10px 20px 12px;
+                            background: #FFFFFF;
+                            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+                            width: 300px;
+                            .min-max{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 16px;
+                                p{
+                                    font-family: 'Gilroy';
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 10px;
+                                    line-height: 14px;
+                                    color: rgba(42, 42, 42, 0.7);
+                                }
+                            }
+                            .range-values{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 4px;
+                                p{
+                                    font-family: 'Gilroy';
+                                    font-style: normal;
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    line-height: 14px;
+                                    color: rgba(42, 42, 42, 0.7);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .list-top{
+                &.commodity-item{
+                    background: transparent;
+                    border: 0;
+                    border-top: 1px solid rgba(38, 38, 38, 0.1);
+                }
+            }
+            .list-item{
+                font-weight: normal;
+                color: #2A2A2A;
+                div:nth-child(2){
+                    text-transform: capitalize;
+                }
+                div:last-child{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    svg{
+                        cursor: pointer;
+                    }
+                }
+                &.commodity-item{
+                    margin-bottom: 10px;
+                }
+            }
+            .loader-div{
+                display: flex;
+                justify-content: center;
+                padding: 36px 46px;
+                img{
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+        .mobile-list{
+            display: none;
+            @include mobile{
+                display: initial;
+            }
+            .list-item{
+                background: #FFFFFF;
+                margin-bottom: 8px;
+                .item-top{
+                    padding: 10px 30px;
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: rgba(42, 42, 42, 0.5);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+                }
+                .item-content{
+                    padding: 25px 30px;
+                    .key-value{
+                        display: flex;
+                        justify-content: space-between;
+                        &:first-child{
+                            margin-bottom: 20px;
+                        }
+                        p{
+                            font-family: 'Gilroy';
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 16px;
+                            color: #2A2A2A;
+                            text-align: right;
+                            &:first-child{
+                                text-align: left;
+                                margin-right: 15px;
+                                font-weight: bold;
+                                color: rgba(42, 42, 42, 0.7);
+                            }
+                            &:last-child{
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+            }
+            .loader-div{
+                display: flex;
+                justify-content: center;
+                padding: 36px 46px;
+                img{
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+    }
+    svg{
+    display: inline-block;
+  }
+}

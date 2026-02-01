@@ -1,0 +1,87 @@
+@import '../../Reusables.scss';
+
+.how{
+    padding: 104px 8%;
+    background: #F6F9FC;
+    @include mobile{
+        padding: 90px 5%;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 80px;
+        @include tablet{
+            grid-template-columns: 1fr;
+        }
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
+        .step{
+            .img-container{
+                display: none;
+            }
+            .icon-text{
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                color: #2C2C2C;
+                margin-top: 24px;
+                p{
+                    margin-top: 0;
+                    margin-left: 10px;
+                    font-size: 1.5rem;
+                }
+            }
+            p{
+                font-size: 1.125rem;
+                line-height: 120.2%;
+                color: #161616;
+                margin-top: 16px;
+            }
+            @include tablet{
+                margin-bottom: 62px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .img-container{
+                    display: block;
+                    margin-bottom: 30px;
+                }
+            }
+            @include mobile{
+                margin-bottom: 62px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .img-container{
+                    display: block;
+                    margin-bottom: 30px;
+                    img{
+                        width: 65%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        &.illustrations{
+            .img-container{
+                margin-bottom: 30px;
+                img{
+                    width: 85%;
+                    height: auto;
+                }
+                &:last-child{
+                    img{
+                        margin-top: -50px;
+                    }
+                }
+            }
+            @include tablet{
+                display: none;
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+}

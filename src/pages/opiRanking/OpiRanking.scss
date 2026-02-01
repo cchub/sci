@@ -1,0 +1,228 @@
+@import '../../Reusables.scss';
+
+.opi-ranking-page{
+    padding: 80px 0 100px;
+    background: #FBFBFD;
+    min-height: 100vh;
+    @include mobile-tablet{
+        padding: 60px 0 100px;
+    }
+    .opi-main{
+        padding: 35px 8%;
+        @include mobile-tablet{
+            padding: 35px 5%;
+        }
+    }
+    .page-title{
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 123.2%;
+        color: #2C2C2C;
+        margin-bottom: 46px;
+        @include mobile{
+            font-size: 22px;
+        }
+        span{
+            margin-left: 8px;
+            cursor: pointer;
+            position: relative;
+            img{
+                margin-bottom: -2px;
+                height: 20px;
+                width: 20px;
+                display: inline;
+                @include mobile{
+                    height: initial;
+                    width: initial;
+                }
+            }
+            .description{
+                display: none;
+                position: absolute;
+                left: 30px;
+                top: -30px;
+                width: 239px;
+                background: #FFFFFF;
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 2px;
+                padding: 12px 15px;
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 130%;
+                color: #565656;
+                &::before{
+                    content: "";
+                    background-color:#FFFFFF;
+                    height: 15px;
+                    width: 15px;
+                    position: absolute;
+                    left: -7px;
+                    top: 30px;
+                    transform: rotate(45deg);
+                }
+                @include mobile{
+                    left: -175px;
+                    top: 35px;
+                    z-index: 10;
+                    &::before{
+                        left: initial;
+                        top: initial;
+                        top: -7px;
+                        left: 175px;
+                    }
+                }
+            }
+            &:hover{
+                .description{
+                    display: initial;
+                    transition: 0.25 ease-in;
+                }
+            }
+        }
+    }
+    .list{
+        .desktop-list{
+            @include mobile{
+                display: none;
+            }
+            .list-top, .list-item{
+                display: grid;
+                grid-template-columns: 0.5fr 1.5fr 1.5fr 1fr;
+                background: #FFFFFF;
+                padding: 36px 46px;
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                /* #2A2A2A */
+                color: rgba(42, 42, 42, 0.7);
+                border: 1px solid rgba(38, 38, 38, 0.1);
+                .value-range{
+                    cursor: pointer;
+                    position: relative;
+                    svg{
+                        margin-left: 16px;
+                    }
+                    .menu{
+                        position: absolute;     
+                        top: 30px;
+                        .range-div{
+                            padding: 10px 20px 12px;
+                            background: #FFFFFF;
+                            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+                            width: 300px;
+                            .min-max{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 16px;
+                                p{
+                                    font-family: 'Gilroy';
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 10px;
+                                    line-height: 14px;
+                                    color: rgba(42, 42, 42, 0.7);
+                                }
+                            }
+                            .range-values{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 4px;
+                                p{
+                                    font-family: 'Gilroy';
+                                    font-style: normal;
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    line-height: 14px;
+                                    color: rgba(42, 42, 42, 0.7);
+                                }
+                            }
+                        }
+                    }
+                }
+                .flag-name{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 30px;
+                        height: 20px;
+                        margin-right: 14px;
+                    }
+                }
+            }
+            .list-item{
+                font-weight: normal;
+                color: #2A2A2A;
+            }
+            .loader-div{
+                display: flex;
+                justify-content: center;
+                padding: 36px 46px;
+                img{
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+        .mobile-list{
+            display: none;
+            @include mobile{
+                display: initial;
+            }
+            .list-item{
+                background: #FFFFFF;
+                margin-bottom: 8px;
+                .item-top{
+                    padding: 10px 30px;
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: rgba(42, 42, 42, 0.5);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+                }
+                .item-content{
+                    padding: 25px 30px;
+                    .key-value{
+                        display: flex;
+                        justify-content: space-between;
+                        &:first-child{
+                            margin-bottom: 20px;
+                        }
+                        p{
+                            font-family: 'Gilroy';
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 16px;
+                            color: #2A2A2A;
+                            text-align: right;
+                            &:first-child{
+                                text-align: left;
+                                margin-right: 15px;
+                                font-weight: bold;
+                                color: rgba(42, 42, 42, 0.7);
+                            }
+                        }
+                    }
+                }
+            }
+            .loader-div{
+                display: flex;
+                justify-content: center;
+                padding: 36px 46px;
+                img{
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+    }
+    svg{
+      display: inline-block;
+    }
+}

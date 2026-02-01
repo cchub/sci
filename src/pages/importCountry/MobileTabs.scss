@@ -1,0 +1,56 @@
+@import '../../Reusables.scss';
+
+.mobile-tabs{
+        .title{
+            padding: 0 24px;
+            height: 60px;
+            border-bottom: 1px solid #EFEFEF;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 150%;
+            color: #595959;
+        }
+        .tabs{
+            padding: 38px 24px;
+            .tab{
+                margin-bottom: 35px;
+                display: flex;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .check{
+                    width: 25px;
+                    height: 25px;
+                    border: 2px solid #595959;
+                    border-radius: 50%;
+                }
+                p{
+                    margin-left: 15px;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: #595959;
+                }
+                &.active{
+                    .check{
+                        border: 2px solid #0D1669;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .dot{
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            background: #0D1669;
+                        }
+                    }
+                    p{
+                        color: #0D1669;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+}

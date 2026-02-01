@@ -1,0 +1,225 @@
+@import "../../Reusables.scss";
+
+.header {
+  font-family: 'Gilroy', sans-serif;
+  &.blue {
+    background: #1a2cd2;
+    // .navbar {
+    //   .nav-items {
+    //     .nav-item {
+    //       &:hover {
+    //         border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+    //         border-top: 4px solid transparent;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+  &.light {
+    background-color: #ffffff;
+    color: #595959;
+    border-bottom: 1px solid rgba(130, 127, 152, 0.2);
+    .navbar{
+      .nav-items{
+        .nav-item{  
+          &.active {
+            color: #004AD9;
+            font-weight: bold;
+            border-bottom: 4px solid #004AD9;
+            border-top: 4px solid transparent;
+          }
+        }
+      }
+    }
+  }
+  transition: ease-in 0.15s;
+  width: 100%;
+  padding: 0 8%;
+  position: fixed;
+  top: 0;
+  color: #ffffff;
+  z-index: 20;
+  .navbar {
+    height: 80px;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    .logo {
+      cursor: pointer;
+      margin-right: auto;
+    }
+    .nav-items {
+      display: flex;
+      font-size: 16px;
+      height: 100%;
+      .nav-item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-right: 49px;
+        font-weight: 500;
+        transition: 0.25s ease-in;
+        cursor: pointer;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.active {
+          font-weight: bold;
+          border-bottom: 4px solid #ffffff;
+          // border-top: 4px solid transparent;
+          // margin-top: 4px;
+        }
+        // &:hover {
+        //     border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+        //     border-top: 4px solid transparent;
+        // }
+      }
+    }
+    .hamburger-icon {
+      display: none;
+    }
+  }
+  .mobile-nav-items,
+  .mobile-nav-bottom {
+    display: none;
+  }
+  // @include tablet {
+  //   padding: 0 5%;
+  //   .navbar {
+  //     height: 60px;
+  //     .logo {
+  //       img {
+  //         height: 26px;
+  //         width: auto;
+  //       }
+  //     }
+  //     .nav-items {
+  //       font-size: 14px;
+  //       .nav-item {
+  //         margin-right: 30px;
+  //         &.active {
+  //           border-bottom: 2px solid #ffffff;
+  //           border-top: 2px solid transparent;
+  //           font-weight: bold;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // @include mini-laptop {
+
+  // }
+  @include mini-laptop {
+    &.show {
+      bottom: 0;
+    }
+    &.hide {
+      bottom: initial;
+    }
+    .navbar {
+      // height: 60px;
+      // .logo {
+      //   img {
+      //     height: 26px;
+      //     width: auto;
+      //   }
+      // }
+      .nav-items {
+        display: none;
+      }
+      .hamburger-icon {
+        display: block;
+        margin-left: 24px;
+      }
+    }
+    .mobile-nav-items {
+      display: flex;
+      padding: 40px 0 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 24px;
+      transition: ease-in 0.15s;
+      .nav-item {
+        height: 40px;
+        align-items: center;
+        margin-bottom: 35px;
+        color: #ffffff;
+        &.active {
+          border-bottom: 4px solid #ffffff;
+          font-weight: bold;
+        }
+      }
+      &.show {
+        height: auto;
+        opacity: 1;
+        .nav-item {
+          display: flex;
+          color: #ffffff;
+        }
+      }
+      &.hide {
+        height: 0;
+        opacity: 0;
+        padding: 0;
+        .nav-item {
+          display: none;
+        }
+      }
+    }
+    .mobile-nav-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transition: ease-in 0.15s;
+      &.show {
+        display: initial;
+        opacity: 1;
+      }
+      &.hide {
+        display: none;
+        opacity: 0;
+      }
+      .powered-by{
+        padding: 0 5%;
+        height: 78px;
+        display: flex;
+        align-items: center;
+        color: #B3BBFF;
+        img{
+            margin-left: 6px;
+        }
+      }
+      .close-div {
+        padding: 0 5%;
+        height: 78px;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        p {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 330%;
+          color: #d33715;
+          text-transform: uppercase;
+          margin-left: 14px;
+        }
+      }
+    }
+  }
+  @include mobile-tablet{
+    padding: 0 5%;
+    .navbar {
+      height: 60px;
+      .logo {
+        img {
+          height: 26px;
+          width: auto;
+        }
+      }
+    }
+  }
+  .overscroll{
+    overscroll-behavior: contain;
+  }
+}

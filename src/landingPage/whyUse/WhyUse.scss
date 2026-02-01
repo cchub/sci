@@ -1,0 +1,52 @@
+@import '../../Reusables.scss';
+
+.why-use{
+    padding: 104px 8%;
+    @include mobile{
+        padding: 90px 5%;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 60px;
+        @include tablet{
+            grid-template-columns: 1fr;
+        }
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
+        .reason{
+            h5{
+                font-weight: bold;
+                font-size: 1.5rem;
+                line-height: 112.2%;
+                color: #2C2C2C;
+                margin-top: 38px;
+            }
+            p{
+                font-size: 1.125rem;
+                line-height: 120.2%;
+                color: #161616;
+                margin-top: 16px;
+            }
+            @include tablet{
+                margin-bottom: 62px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            @include mobile{
+                margin-bottom: 62px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                // h5{
+                //     font-size: 22px;
+                // }
+                // p{
+                //     font-size: 16px;
+                // }
+            }
+        }
+    }
+}

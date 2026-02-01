@@ -1,0 +1,62 @@
+{
+  "name": "sci-trade",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/icons": "^1.0.4",
+    "@chakra-ui/react": "^1.1.5",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.21.0",
+    "cross-env": "^7.0.2",
+    "file-saver": "^2.0.5",
+    "flutterwave-react-v3": "^1.0.9",
+    "framer-motion": "^3.2.1",
+    "light-date": "^1.2.0",
+    "numeral": "^2.0.6",
+    "query-string": "^6.13.5",
+    "react": "^16.13.1",
+    "react-copy-to-clipboard": "^5.0.3",
+    "react-dom": "^16.13.1",
+    "react-flutterwave-rave": "^1.0.4",
+    "react-helmet": "^6.1.0",
+    "react-ravepayment": "^3.0.1",
+    "react-redux": "^7.2.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "react-share": "^4.4.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "rsuite": "^4.8.4",
+    "save": "^2.4.0",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "scripts": {
+    "start": "cross-env REACT_APP_URL=https://api.sci.cchub.info react-scripts start",
+    "build-staging": "cross-env REACT_APP_URL=https://api.sci.cchub.info react-scripts build",
+    "build-production": "cross-env REACT_APP_URL=https://api.scitrade.africa react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "sass": "^1.45.0"
+  }
+}
