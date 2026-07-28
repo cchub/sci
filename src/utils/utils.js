@@ -15,16 +15,13 @@ export const debounce = (callback, delay) => {
 }
 
 export const getCodeByIp = async () => {
-    //https://ipstack.com/dashboard for viewing dashboard
-    const key = process.env.REACT_APP_IPSTACK_KEY
-    let countryCode = '';
-    await fetch(`https://api.ipstack.com/check?access_key=${key}`)
-      .then((response) => response.json())
-      .then((responseJSON) => {
-        const { country_code } = responseJSON;
-        countryCode = country_code
-      });
-     return countryCode;
+    try {
+        const response = await fetch('https://ipapi.co/json/');
+        const { country_code } = await response.json();
+        return country_code || '';
+    } catch {
+        return '';
+    }
 }
 
 export const generateCommoditiesUrl = ({export_code, import_code, category, order, sortBy, max, min }) => {
